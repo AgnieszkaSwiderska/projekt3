@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="1000.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <TableView fx:id="tableView" layoutY="70.0" maxHeight="330.0" maxWidth="400.0" minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="125.0" resizable="false" text="Imię" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="175.0" resizable="false" text="Nazwisko" />
+            <TableColumn fx:id="pokojColumn" maxWidth="500.0" prefWidth="98.0" resizable="false" text="Pokój" />
+        </columns>
+      </TableView>
+      <Button fx:id="wczytajButton" layoutX="41.0" layoutY="21.0" mnemonicParsing="false" onAction="#wczytajPlik" prefHeight="31.0" prefWidth="145.0" styleClass="mybutton" text="Wczytaj plik" />
+      <Button fx:id="zapiszButton" layoutX="223.0" layoutY="21.0" mnemonicParsing="false" onAction="#zapiszPlik" prefHeight="31.0" prefWidth="145.0" styleClass="mybutton" text="Zapisz plik" />
+      <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="636.0" layoutY="37.0" opacity="0.82" pickOnBounds="true">
+         <image>
+            <Image url="@../model/plan.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="739.0" layoutY="4.0" text="Plan budynku">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="raportButton" layoutX="426.0" layoutY="21.0" mnemonicParsing="false" onAction="#generujRaport" prefHeight="31.0" prefWidth="82.0" styleClass="mybutton" text="Raport" />
+      <Button fx:id="dodajButton" layoutX="537.0" layoutY="21.0" mnemonicParsing="false" onAction="#dodajOsobe" prefHeight="31.0" prefWidth="82.0" styleClass="mybutton" text="Dodaj" />
+      <Label layoutX="437.0" layoutY="75.0" text="Imię" />
+      <TextField fx:id="imieText" layoutX="420.0" layoutY="96.0" prefHeight="31.0" prefWidth="195.0" />
+      <Label layoutX="435.0" layoutY="142.0" text="Nazwisko" />
+      <TextField fx:id="nazwiskoText" layoutX="420.0" layoutY="163.0" prefHeight="31.0" prefWidth="195.0" />
+      <TextField fx:id="nrPokojuText" layoutX="425.0" layoutY="238.0" prefHeight="31.0" prefWidth="106.0" />
+      <TextField fx:id="hourStartText" layoutX="450.0" layoutY="313.0" prefHeight="31.0" prefWidth="63.0" />
+      <TextField fx:id="hourStopText" layoutX="547.0" layoutY="313.0" prefHeight="31.0" prefWidth="63.0" />
+      <Label layoutX="430.0" layoutY="217.0" text="Numer pokoju" />
+      <Label layoutX="433.0" layoutY="285.0" text="Pracuje" />
+      <Label layoutX="521.0" layoutY="318.0" text="do:" />
+      <Label layoutX="427.0" layoutY="318.0" prefHeight="21.0" prefWidth="21.0" text="od:" />
+      <Label fx:id="errorLabel" layoutX="420.0" layoutY="357.0" prefHeight="21.0" prefWidth="195.0" text="tekst" textFill="#f50101" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
